@@ -93,7 +93,7 @@ npm install --save-dev svelte-dnd-action
         margin: 0.15em 0;
     }
 </style>
-<section use:dndzone="{{items," flipDurationMs}} on:consider="{handleDndConsider}" on:finalize="{handleDndFinalize}">
+<section use:dndzone="{{items, flipDurationMs}}" on:consider="{handleDndConsider}" on:finalize="{handleDndFinalize}">
     {#each items as item(item.id)}
     <div animate:flip="{{duration: flipDurationMs}}">{item.name}</div>
     {/each}
